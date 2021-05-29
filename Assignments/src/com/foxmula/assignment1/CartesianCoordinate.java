@@ -25,7 +25,6 @@ public class CartesianCoordinate {
     }
 
     public CartesianCoordinate(){
-        this.x = 0;
-        this.y = 0;
+        this(0, 0);
     }
 }
