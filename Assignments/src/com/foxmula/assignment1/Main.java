@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Time time1 = new Time(55, 700, 293);
-        Time time2 = new Time(43, 233, 323);
+        Time time2 = new Time(43, 233, 5000);
 
         time1.Add(time2);
 
