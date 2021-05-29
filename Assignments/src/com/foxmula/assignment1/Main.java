@@ -1,6 +1,7 @@
 package com.foxmula.assignment1;
 
 import java.util.NoSuchElementException;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -15,28 +16,21 @@ public class Main {
 
         MenuForStackOperations(stack1, stack2);
 
-        CoordinatePair p1 = new CoordinatePair(2.3, 4.3);
-        CoordinatePair p2 = new CoordinatePair(4.3, 3.2);
-        CoordinatePair p3 = new CoordinatePair(3.2, 4.5);
-        CoordinatePair p4 = new CoordinatePair(11, 4.9);
+        CartesianCoordinate p1 = new CartesianCoordinate();
+        CartesianCoordinate p2 = new CartesianCoordinate();
+        CartesianCoordinate p3 = new CartesianCoordinate();
+        CartesianCoordinate p4 = new CartesianCoordinate();
+
+        GenerateCoordinate(p1, p2, p3, p4);
         Trapezoid trapezoid = new Trapezoid(p1, p2, p3, p4, 5);
 
-        p1 = new CoordinatePair(2.3, 4.3);
-        p2 = new CoordinatePair(4.3, 3.2);
-        p3 = new CoordinatePair(3.2, 4.5);
-        p4 = new CoordinatePair(11, 4.9);
+        GenerateCoordinate(p1, p2, p3, p4);
         Parallelogram parallelogram = new Parallelogram(p1, p2, p3, p4, 5.3);
 
-        p1 = new CoordinatePair(5.3, 2.3);
-        p2 = new CoordinatePair(6.3, 2.2);
-        p3 = new CoordinatePair(7.2, 5.5);
-        p4 = new CoordinatePair(12, 2.9);
+        GenerateCoordinate(p1, p2, p3, p4);
         Rectangle rectangle = new Rectangle(p1, p2, p3, p4, 8);
 
-        p1 = new CoordinatePair(7.3, 2.4);
-        p2 = new CoordinatePair(2.3, 7.2);
-        p3 = new CoordinatePair(8.2, 3.5);
-        p4 = new CoordinatePair(1, 8.9);
+        GenerateCoordinate(p1, p2, p3, p4);
         Square square = new Square(p1, p2, p3, p4, 3);
 
         System.out.println(trapezoid.Area() + "is the area of trapezoid");
@@ -104,5 +98,29 @@ public class Main {
 
     public static boolean AreStacksEqual(Stack stack1, Stack stack2) {
         return (stack1.length() == stack2.length());
+    }
+
+    public static void GenerateCoordinate(CartesianCoordinate p1, CartesianCoordinate p2, CartesianCoordinate p3, CartesianCoordinate p4) {
+        Random random = new Random();
+
+        double randomMax = 10.0;
+        double randomMin = 1.0;
+        double[] randomDouble = new double[8];
+
+        for (int i = 0; i < 8; i++) {
+            randomDouble[i] = randomMin + (randomMax - randomMin) * random.nextDouble();
+        }
+
+        p1.setX(randomDouble[0]);
+        p2.setY(randomDouble[1]);
+
+        p2.setX(randomDouble[2]);
+        p2.setY(randomDouble[3]);
+
+        p3.setX(randomDouble[4]);
+        p3.setY(randomDouble[5]);
+
+        p4.setX(randomDouble[6]);
+        p4.setY(randomDouble[7]);
     }
 }

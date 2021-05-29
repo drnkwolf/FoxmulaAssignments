@@ -1,9 +1,9 @@
 package com.foxmula.assignment1;
 
 public class Quadrilateral {
-    private CoordinatePair p1, p2, p3, p4;
+    private CartesianCoordinate p1, p2, p3, p4;
 
-    public Quadrilateral(CoordinatePair p1, CoordinatePair p2, CoordinatePair p3, CoordinatePair p4) {
+    public Quadrilateral(CartesianCoordinate p1, CartesianCoordinate p2, CartesianCoordinate p3, CartesianCoordinate p4) {
         this.p1 = p1;
         this.p2 = p2;
         this.p3 = p3;

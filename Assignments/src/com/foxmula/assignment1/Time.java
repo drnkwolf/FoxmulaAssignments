@@ -11,12 +11,10 @@ public class Time {
         FormatCorrection();
     }
 
-    public void Add(Time timeParam){
-        int totalHours, totalMinutes, totalSeconds;
-
-        this.seconds += timeParam.seconds;
-        this.minutes += timeParam.minutes;
-        this.hours += timeParam.hours;
+    public void Add(Time time){
+        this.seconds += time.seconds;
+        this.minutes += time.minutes;
+        this.hours += time.hours;
 
         FormatCorrection();
 
