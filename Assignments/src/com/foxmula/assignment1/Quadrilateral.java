@@ -10,7 +10,7 @@ public class Quadrilateral {
         this.p4 = p4;
     }
 
-    public double LengthOfTheSide(){
+    public double lengthOfTheSide(){
         double length = Math.sqrt(((this.p1.getX() - this.p2.getX()) * (this.p1.getX() - this.p2.getX())) + ((this.p1.getY() - this.p2.getY()) * (this.p1.getY() - this.p2.getY())));
 
         return length;

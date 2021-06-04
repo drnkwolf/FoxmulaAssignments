@@ -9,7 +9,7 @@ public class Main {
         Time time1 = new Time(55, 700, 293);
         Time time2 = new Time(43, 233, 5000);
 
-        time1.Add(time2);
+        time1.add(time2);
 
         Stack stack1 = new Stack();
         Stack stack2 = new Stack();
@@ -33,10 +33,10 @@ public class Main {
         GenerateCoordinate(p1, p2, p3, p4);
         Square square = new Square(p1, p2, p3, p4, 3);
 
-        System.out.println(trapezoid.Area() + "is the area of trapezoid");
-        System.out.println(parallelogram.Area() + "is the area of parallelogram");
-        System.out.println(rectangle.Area() + "is the area of rectangle");
-        System.out.println(square.Area() + "is the area of square");
+        System.out.println(trapezoid.area() + "is the area of trapezoid");
+        System.out.println(parallelogram.area() + "is the area of parallelogram");
+        System.out.println(rectangle.area() + "is the area of rectangle");
+        System.out.println(square.area() + "is the area of square");
     }
 
     public static void MenuForStackOperations(Stack stack1, Stack stack2) {

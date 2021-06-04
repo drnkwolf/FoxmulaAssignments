@@ -8,8 +8,8 @@ public class Parallelogram extends Quadrilateral {
         this.height = height;
     }
 
-    public double Area(){
-        double base = super.LengthOfTheSide();
+    public double area(){
+        double base = super.lengthOfTheSide();
         double area = base * this.height;
 
         return area;

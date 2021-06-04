@@ -8,20 +8,20 @@ public class Time {
         this.minutes = minutes;
         this.seconds = seconds;
 
-        FormatCorrection();
+        formatCorrection();
     }
 
-    public void Add(Time time){
+    public void add(Time time){
         this.seconds += time.seconds;
         this.minutes += time.minutes;
         this.hours += time.hours;
 
-        FormatCorrection();
+        formatCorrection();
 
         System.out.println(this.hours + " hours " + this.minutes + " minutes " + this.seconds + " seconds");
     }
 
-    private void FormatCorrection(){
+    private void formatCorrection(){
         this.minutes += this.seconds / 60;
         this.seconds %= 60;
 

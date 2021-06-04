@@ -5,7 +5,7 @@ import java.util.*;
 public class CollectionOperations {
     private static Scanner scan = new Scanner(System.in);
 
-    public static void PopulatedArrayList(ArrayList<Integer> arrayList){
+    public static void populateArrayList(ArrayList<Integer> arrayList){
         while(true){
             System.out.println("Enter a integer to populated ArrayList: ");
             System.out.println("Or 0 to exit");
@@ -20,8 +20,8 @@ public class CollectionOperations {
         }
     }
 
-    public static boolean PresentInArrayList(ArrayList<Integer> arrayList) {
-        System.out.print("Enter a string to search in the ArrayList: ");
+    public static boolean presentInArrayList(ArrayList<Integer> arrayList) {
+        System.out.print("Enter a integer to search in the ArrayList: ");
         int elementToFind = Integer.parseInt(scan.nextLine());
 
         if (arrayList.contains(elementToFind)) {
@@ -30,7 +30,7 @@ public class CollectionOperations {
         return false;
     }
 
-    public static void PopulatedHasSet(HashSet<String> hashSet){
+    public static void populatedHasSet(HashSet<String> hashSet){
         while(true){
             System.out.println("Enter a string to populated HashSet: ");
             System.out.println("Or 0 to exit");
@@ -45,7 +45,7 @@ public class CollectionOperations {
         }
     }
 
-    public static boolean PresentInHashSet(HashSet<String> hashSet){
+    public static boolean presentInHashSet(HashSet<String> hashSet){
         System.out.print("Enter a string to search in the HashSet: ");
         String elementToFind = scan.nextLine();
 
@@ -55,7 +55,7 @@ public class CollectionOperations {
         return false;
     }
 
-    public static void TraverseHashSet(HashSet<String> hashSet){
+    public static void traverseHashSet(HashSet<String> hashSet){
         Iterator<String> iterator = hashSet.iterator();
 
         System.out.print("Now Traversing the HashSet: ");
@@ -66,7 +66,7 @@ public class CollectionOperations {
         System.out.println();
     }
 
-    public static void PopulatedTreeSet(TreeSet<String> treeSet){
+    public static void populatedTreeSet(TreeSet<String> treeSet){
         while(true){
             System.out.println("Enter a string to populated TreeSet: ");
             System.out.println("Or 0 to exit");
@@ -81,7 +81,7 @@ public class CollectionOperations {
         }
     }
 
-    public static void TraverseTreeSet(TreeSet<String> treeSet){
+    public static void traverseTreeSet(TreeSet<String> treeSet){
         Iterator<String> iterator = treeSet.iterator();
 
         System.out.print("Now Traversing the TreeSet: ");
@@ -91,7 +91,7 @@ public class CollectionOperations {
         }
     }
 
-    public static void OccurrenceInArrayList(ArrayList<Integer> arrayList){
+    public static void occurrenceInArrayList(ArrayList<Integer> arrayList){
         for (int i = 0; i < arrayList.size(); i++){
             int element = arrayList.get(i);
             int frequency = Collections.frequency(arrayList, element);
@@ -100,8 +100,8 @@ public class CollectionOperations {
         }
     }
 
-    public static void SumOfPair(ArrayList<Integer> arrayList){
-        System.out.print("Enter in integer: ");
+    public static void sumOfPair(ArrayList<Integer> arrayList){
+        System.out.print("Enter an integer: ");
         int sum = Integer.parseInt(scan.nextLine());
 
         for (int i = 0; i < arrayList.size(); i++){

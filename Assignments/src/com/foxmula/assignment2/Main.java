@@ -10,30 +10,30 @@ public class Main {
     static TreeSet<String> treeSet = new TreeSet<>();
 
     public static void main(String[] args) {
-        CollectionOperations.PopulatedArrayList(arrayList);
+        CollectionOperations.populateArrayList(arrayList);
 
-        if (CollectionOperations.PresentInArrayList(arrayList)) {
+        if (CollectionOperations.presentInArrayList(arrayList)) {
             System.out.println("Present");
         } else {
             System.out.println("Not Present");
         }
 
-        CollectionOperations.PopulatedHasSet(hashSet);
+        CollectionOperations.populatedHasSet(hashSet);
 
-        if (CollectionOperations.PresentInHashSet(hashSet)){
+        if (CollectionOperations.presentInHashSet(hashSet)){
             System.out.println("Preset");
         }else{
             System.out.println("Not Present");
         }
 
-        CollectionOperations.TraverseHashSet(hashSet);
+        CollectionOperations.traverseHashSet(hashSet);
 
-        CollectionOperations.PopulatedTreeSet(treeSet);
+        CollectionOperations.populatedTreeSet(treeSet);
 
-        CollectionOperations.TraverseTreeSet(treeSet);
+        CollectionOperations.traverseTreeSet(treeSet);
 
-        CollectionOperations.OccurrenceInArrayList(arrayList);
+        CollectionOperations.occurrenceInArrayList(arrayList);
 
-        CollectionOperations.SumOfPair(arrayList);
+        CollectionOperations.sumOfPair(arrayList);
     }
 }
