@@ -1,7 +1,5 @@
 package com.foxmula.assignment3;
 
-import java.util.Collections;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -33,22 +31,15 @@ public class UtilityFunctions {
     }
 
     static public void frequencyOfElements(int[] inputArray) {
-        HashMap<Integer, Integer> hashMap = new HashMap<>();
+        TreeMap<Integer, Integer> treeMap = new TreeMap<>();
 
         for (int i = 0; i < inputArray.length; i++) {
-            if (hashMap.containsKey(inputArray[i])) {
-                hashMap.put(inputArray[i], hashMap.get(inputArray[i]) + 1);
+            if (treeMap.containsKey(inputArray[i])) {
+                treeMap.put(inputArray[i], treeMap.get(inputArray[i]) + 1);
             } else {
-                hashMap.put(inputArray[i], 1);
+                treeMap.put(inputArray[i], 1);
             }
         }
-        sortByKeys(hashMap);
-    }
-
-    static public void sortByKeys(HashMap<Integer, Integer> hashMap){
-        TreeMap<Integer, Integer> treeMap = new TreeMap<>();
-        treeMap.putAll(hashMap);
-
         printTreeMap(treeMap);
     }
 
